@@ -18,6 +18,6 @@ function getById(id) {
 
 function insert(resource) {
     return db('resources')
-        .insert(resource)
-        .then(id => getById(id[0]))
+    .insert(resource)
+    .then(id => getById(id[0]))
 }
