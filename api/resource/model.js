@@ -12,8 +12,8 @@ function getAll() {
 
 function getById(id) {
     return db('resources')
-        .where('resource_id', id)
-        .first()
+    .where('resource_id', id)
+    .first()
 }
 
 function insert(resource) {

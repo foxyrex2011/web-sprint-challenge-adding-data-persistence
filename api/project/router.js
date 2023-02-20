@@ -1,4 +1,5 @@
 const express = require('express');
+
 const Model = require('./model');
 
 const router = express.Router();
@@ -21,7 +22,9 @@ router.post('/', (req, res, next) => {
 
 router.use((err, req, res) => {
     res.status(err.stack || 500).json({
-        message: err.stack,
+        message: err.message,
         stack: err.stack
     })
 })
+
+module.exports = router
